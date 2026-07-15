@@ -3,7 +3,7 @@ import { CtaBand, PageHero, SiteShell } from "../site-components";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Meet William Mortensen and discover the protection, integrity, reliability, and trust behind Shield Plumbing.",
+  description: "Meet Will Mortensen and discover the protection, integrity, reliability, and trust behind Shield Plumbing.",
 };
 
 export default function AboutPage() {
@@ -20,12 +20,12 @@ export default function AboutPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/william-mortensen-headshot.png"
-            alt="William Mortensen, owner of Shield Plumbing"
+            alt="Will Mortensen, owner of Shield Plumbing"
             width={1086}
             height={1448}
           />
           <div className="portrait-caption">
-            <strong>William Mortensen</strong>
+            <strong>Will Mortensen</strong>
             <span>Owner · Journeyman Plumber</span>
           </div>
         </div>
