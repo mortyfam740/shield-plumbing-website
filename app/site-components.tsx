@@ -31,7 +31,15 @@ export function Header() {
           />
         </Link>
         <nav aria-label="Primary navigation">
-          <Link href="/services">Services</Link>
+          <details className="nav-dropdown">
+            <summary>Services</summary>
+            <div className="nav-dropdown-menu" aria-label="Plumbing services">
+              <Link href="/services">All services</Link>
+              <Link href="/water-heater-replacement">Water heater replacement</Link>
+              <Link href="/plumbing-repairs-fixture-installation">Plumbing repairs &amp; fixtures</Link>
+              <Link href="/remodel-plumbing-rough-ins">Remodel plumbing &amp; rough-ins</Link>
+            </div>
+          </details>
           <details className="nav-dropdown">
             <summary>Service Area</summary>
             <div className="nav-dropdown-menu" aria-label="Service area locations">
@@ -79,6 +87,13 @@ export function Footer() {
           <Link href="/service-area">Service Area</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
+        </div>
+        <div className="footer-links">
+          <strong>Services</strong>
+          <Link href="/water-heater-replacement">Water heater replacement</Link>
+          <Link href="/plumbing-repairs-fixture-installation">Plumbing repairs &amp; fixtures</Link>
+          <Link href="/remodel-plumbing-rough-ins">Remodel plumbing &amp; rough-ins</Link>
+          <Link href="/services">All services</Link>
         </div>
         <div className="footer-links">
           <strong>Local service</strong>

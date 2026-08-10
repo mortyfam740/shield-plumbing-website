@@ -40,7 +40,8 @@ export default function ServiceAreaPage() {
             Core scheduling includes Washougal, Camas, Vancouver, and western
             Skamania County, including regular service in east Clark County areas
             such as Brush Prairie and Hockinson. More distant locations may depend on the type of work
-            and current schedule.
+            and current schedule. Shield Plumbing is not currently scheduling work
+            in Oregon; Oregon service will be announced only after licensing is complete.
           </p>
         </div>
       </section>

@@ -4,19 +4,22 @@ import { CtaBand, SiteShell, TrustStrip, business } from "./site-components";
 
 const services = [
   {
+    icon: Droplets,
+    title: "Water heater replacement",
+    href: "/water-heater-replacement",
+    text: "Gas and electric tank water heater replacement, tankless replacement when appropriate, and associated installation upgrades.",
+  },
+  {
     icon: Wrench,
-    title: "Residential repairs",
-    text: "Thoughtful troubleshooting and durable repairs for leaks, toilets, faucets, fixtures, and failing plumbing components.",
+    title: "Plumbing repairs & fixtures",
+    href: "/plumbing-repairs-fixture-installation",
+    text: "Durable repairs for leaking or damaged piping, valves, toilets, faucets, fixtures, and failing plumbing components.",
   },
   {
     icon: House,
-    title: "Remodels & installations",
-    text: "Clean, code-conscious plumbing for fixture upgrades, finish work, repipes, and residential improvement projects.",
-  },
-  {
-    icon: Droplets,
-    title: "Water heaters",
-    text: "Conventional tank water heater replacement, tankless replacement, routine maintenance, and associated code and safety upgrades.",
+    title: "Remodel plumbing & rough-ins",
+    href: "/remodel-plumbing-rough-ins",
+    text: "Clean, code-conscious rough-in and finish plumbing for kitchens, bathrooms, basements, and residential improvements.",
   },
 ];
 
@@ -116,8 +119,8 @@ export default function Home() {
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
-                <Link href="/services">
-                  View services <b aria-hidden="true">↗</b>
+                <Link href={service.href}>
+                  Learn more <b aria-hidden="true">↗</b>
                 </Link>
               </article>
             );

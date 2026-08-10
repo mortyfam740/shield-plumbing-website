@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Droplets, House, Wrench } from "lucide-react";
 import { CtaBand, PageHero, SiteShell } from "../site-components";
 
@@ -10,41 +11,43 @@ export const metadata: Metadata = {
 
 const serviceGroups = [
   {
-    icon: Wrench,
-    title: "Service & repair",
+    icon: Droplets,
+    title: "Water heater replacement",
+    href: "/water-heater-replacement",
     description:
-      "Clear troubleshooting and lasting repairs for common residential plumbing problems.",
+      "Replacement options selected for the home, household needs, existing installation, and budget.",
     items: [
-      "Leak diagnosis and repair",
+      "Tank water heater replacement",
+      "Tankless replacement",
+      "Code and safety upgrades associated with replacement",
+    ],
+  },
+  {
+    icon: Wrench,
+    title: "Plumbing repairs & fixture installation",
+    href: "/plumbing-repairs-fixture-installation",
+    description:
+      "Focused residential repairs and clean fixture installations with clear options before work begins.",
+    items: [
+      "Leaking and damaged pipe repair",
       "Toilet repair and replacement",
       "Faucets, sinks, disposals, and fixtures",
-      "Hose bibbs and shutoff valves",
-      "Drain and waste piping repair",
+      "Hose bibbs, shutoff valves, and common valve replacement",
+      "Limited fixture and branch-line drain clearing",
     ],
   },
   {
     icon: House,
-    title: "Installations & improvements",
+    title: "Remodel plumbing & rough-ins",
+    href: "/remodel-plumbing-rough-ins",
     description:
-      "Code-conscious plumbing for planned upgrades, remodel phases, and improving older systems.",
+      "Code-conscious rough-in and finish plumbing planned around the completed room.",
     items: [
-      "Kitchen and bathroom fixture installation",
-      "Residential remodel plumbing",
-      "Finish plumbing",
-      "Water and drain repiping",
-      "Laundry and utility plumbing",
-    ],
-  },
-  {
-    icon: Droplets,
-    title: "Water heaters",
-    description:
-      "Replacement and maintenance for conventional residential tank water heaters.",
-    items: [
-      "Tank water heater replacement",
-      "Tankless replacement",
-      "Routine flushing and maintenance",
-      "Code and safety upgrades associated with replacement",
+      "Bathroom, kitchen, and basement remodels",
+      "Drain, waste, and vent rough-ins",
+      "Water-supply rough-ins",
+      "Fixture relocation",
+      "Finish plumbing and fixture installation",
     ],
   },
 ];
@@ -70,6 +73,7 @@ export default function ServicesPage() {
               <div>
                 <h2>{group.title}</h2>
                 <p>{group.description}</p>
+                <Link className="service-detail-link" href={group.href}>Explore this service <span aria-hidden="true">→</span></Link>
               </div>
               <ul>
                 {group.items.map((item) => <li key={item}>{item}</li>)}
