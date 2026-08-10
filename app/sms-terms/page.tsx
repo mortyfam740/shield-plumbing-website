@@ -4,6 +4,7 @@ import { PageHero, SiteShell } from "../site-components";
 export const metadata: Metadata = {
   title: "SMS Terms & Privacy",
   description: "Text messaging terms, opt-out instructions, and SMS privacy information for Shield Plumbing LLC.",
+  robots: { index: false, follow: true },
 };
 
 export default function SmsTermsPage() {

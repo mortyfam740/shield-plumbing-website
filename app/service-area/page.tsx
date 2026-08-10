@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBand, PageHero, SiteShell } from "../site-components";
 
 export const metadata: Metadata = {
   title: "Service Area",
   description: "Residential plumbing service based in Washougal and serving communities across Southwest Washington.",
+  alternates: { canonical: "/service-area" },
 };
 
 export default function ServiceAreaPage() {
@@ -20,31 +22,26 @@ export default function ServiceAreaPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/southwest-washington-service-map.png"
-            alt="Muted regional map highlighting Vancouver, Camas, and Washougal in Southwest Washington"
-            width={1456}
-            height={1092}
+            alt="Shield Plumbing service area covering Washougal, Camas, Vancouver, and western Skamania County in Southwest Washington"
+            width={1397}
+            height={941}
           />
-          <div className="map-city map-city-vancouver"><i />Vancouver</div>
-          <div className="map-city map-city-camas"><i />Camas</div>
-          <div className="map-city map-city-washougal"><i />Washougal</div>
-          <div className="map-county-title">
-            <strong>Southwest Washington</strong>
-            <span>Local service area</span>
-          </div>
         </div>
         <div className="area-copy">
           <p className="eyebrow">Core communities</p>
           <h2>Local knowledge, responsive scheduling.</h2>
           <div className="city-grid">
-            <span>Washougal</span>
-            <span>Camas</span>
-            <span>Vancouver</span>
-            <span>Southwest Washington</span>
+            <Link href="/washougal-plumber">Washougal plumber →</Link>
+            <Link href="/camas-plumber">Camas plumber →</Link>
+            <Link href="/vancouver-plumber">Vancouver plumber →</Link>
+            <Link href="/skamania-county-plumber">Skamania County plumber →</Link>
           </div>
           <p>
-            If your home is elsewhere in Southwest Washington, call to confirm current
-            scheduling and availability. Shield Plumbing is not currently
-            scheduling work in Oregon.
+            Core scheduling includes Washougal, Camas, Vancouver, and western
+            Skamania County, including regular service in east Clark County areas
+            such as Brush Prairie and Hockinson. More distant locations may depend on the type of work
+            and current schedule. Shield Plumbing is not currently scheduling work
+            in Oregon; Oregon service will be announced only after licensing is complete.
           </p>
         </div>
       </section>

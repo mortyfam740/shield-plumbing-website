@@ -8,6 +8,7 @@ export const business = {
   email: "info@shieldplumbingllc.com",
   waLicense: "SHIELPL740L9",
   mailingAddress: "3307 Evergreen Way STE 707 #305, Washougal, WA 98671",
+  hoursDisplay: "Monday–Friday, 8:00 a.m.–4:00 p.m.",
 };
 
 export function Header() {
@@ -31,7 +32,16 @@ export function Header() {
         </Link>
         <nav aria-label="Primary navigation">
           <Link href="/services">Services</Link>
-          <Link href="/service-area">Service Area</Link>
+          <details className="nav-dropdown">
+            <summary>Service Area</summary>
+            <div className="nav-dropdown-menu" aria-label="Service area locations">
+              <Link href="/service-area">Service area overview</Link>
+              <Link href="/washougal-plumber">Washougal</Link>
+              <Link href="/camas-plumber">Camas</Link>
+              <Link href="/vancouver-plumber">Vancouver</Link>
+              <Link href="/skamania-county-plumber">Skamania County</Link>
+            </div>
+          </details>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </nav>
@@ -71,9 +81,18 @@ export function Footer() {
           <Link href="/contact">Contact</Link>
         </div>
         <div className="footer-links">
+          <strong>Local service</strong>
+          <Link href="/washougal-plumber">Washougal plumber</Link>
+          <Link href="/camas-plumber">Camas plumber</Link>
+          <Link href="/vancouver-plumber">Vancouver plumber</Link>
+          <Link href="/skamania-county-plumber">Skamania County plumber</Link>
+          <Link href="/service-area">Full service area</Link>
+        </div>
+        <div className="footer-links">
           <strong>Contact</strong>
           <a href={`tel:${business.phoneHref}`}>{business.phoneDisplay}</a>
           <a href={`mailto:${business.email}`}>{business.email}</a>
+          <span>{business.hoursDisplay}</span>
           <span>{business.mailingAddress}</span>
         </div>
         <div className="footer-links">

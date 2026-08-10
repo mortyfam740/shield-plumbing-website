@@ -5,6 +5,7 @@ import { PageHero, SiteShell, business } from "../site-components";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Call, text, or email Shield Plumbing LLC to discuss residential plumbing service.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -33,6 +34,11 @@ export default function ContactPage() {
             <strong>{business.email}</strong>
             <span>Good for project details and documents</span>
           </a>
+          <div className="contact-mailing">
+            <small>Business hours</small>
+            <strong>{business.hoursDisplay}</strong>
+            <span>Closed Saturday and Sunday</span>
+          </div>
           <div className="contact-mailing">
             <small>Mailing address</small>
             <strong>{business.mailingAddress}</strong>

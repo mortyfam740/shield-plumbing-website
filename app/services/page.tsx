@@ -5,6 +5,7 @@ import { CtaBand, PageHero, SiteShell } from "../site-components";
 export const metadata: Metadata = {
   title: "Residential Plumbing Services",
   description: "Water heaters, plumbing repairs, fixture installation, repipes, and remodel plumbing from Shield Plumbing LLC.",
+  alternates: { canonical: "/services" },
 };
 
 const serviceGroups = [

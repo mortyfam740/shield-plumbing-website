@@ -4,6 +4,7 @@ import { PageHero, SiteShell, business } from "../site-components";
 export const metadata: Metadata = {
   title: "SMS Opt-In",
   description: "Optional text messaging consent for Shield Plumbing LLC service communications.",
+  robots: { index: false, follow: true },
 };
 
 export default function SmsOptInPage() {

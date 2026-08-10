@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   },
   description:
     "Shield Plumbing provides trusted residential plumbing repairs, installations, and replacements in Washougal, Camas, and Vancouver, WA. Owner-operated.",
+  alternates: {
+    canonical: "/",
+  },
   applicationName: "Shield Plumbing",
   category: "Residential plumbing",
   robots: {
@@ -49,8 +52,12 @@ export const metadata: Metadata = {
     images: ["/images/shield-hero-plumbing.png"],
   },
   icons: {
-    icon: "/brand/shield-icon.png",
-    shortcut: "/brand/shield-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
   },
 };
 
@@ -65,6 +72,13 @@ const localBusinessSchema = {
   email: "info@shieldplumbingllc.com",
   image: `${siteUrl}/brand/shield-plumbing-horizontal.png`,
   logo: `${siteUrl}/brand/shield-icon.png`,
+  priceRange: "$$",
+  openingHoursSpecification: [{
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "16:00",
+  }],
   founder: {
     "@type": "Person",
     name: "Will Mortensen",
@@ -73,7 +87,15 @@ const localBusinessSchema = {
     { "@type": "City", name: "Washougal", containedInPlace: { "@type": "State", name: "Washington" } },
     { "@type": "City", name: "Camas", containedInPlace: { "@type": "State", name: "Washington" } },
     { "@type": "City", name: "Vancouver", containedInPlace: { "@type": "State", name: "Washington" } },
+    { "@type": "AdministrativeArea", name: "Skamania County", containedInPlace: { "@type": "State", name: "Washington" } },
   ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Washougal",
+    addressRegion: "WA",
+    postalCode: "98671",
+    addressCountry: "US",
+  },
   knowsAbout: [
     "Residential plumbing repair",
     "Water heater replacement",

@@ -26,11 +26,12 @@ export default function Home() {
       <section className="home-hero">
         <div className="home-hero-inner">
           <div className="home-hero-copy">
-            <p className="eyebrow light">Local residential plumbing</p>
-            <h1>Quality work. Clear communication. No runaround.</h1>
+            <p className="eyebrow light">Washougal &amp; Camas residential plumber</p>
+            <h1>Local plumbing service. Clear communication. No runaround.</h1>
             <p>
-              Owner-operated plumbing service for homeowners in Washougal,
-              Camas, Vancouver, and the surrounding area.
+              Shield Plumbing is an owner-operated residential plumber based in
+              Washougal and serving homeowners in Camas, Vancouver, and nearby
+              Southwest Washington communities.
             </p>
             <div className="hero-actions">
               <a className="button button-light" href={`tel:${business.phoneHref}`}>
@@ -60,6 +61,39 @@ export default function Home() {
       </section>
 
       <TrustStrip />
+
+      <section className="local-links page-shell" aria-labelledby="local-service-title">
+        <div>
+          <p className="eyebrow">Your local plumber</p>
+          <h2 id="local-service-title">Plumbing service close to home.</h2>
+          <p>
+            Get local information, the services available in your city, and a
+            direct way to request service from Shield Plumbing.
+          </p>
+        </div>
+        <div className="local-link-grid">
+          <Link href="/washougal-plumber">
+            <span>Based in Washougal</span>
+            <strong>Washougal plumber</strong>
+            <b aria-hidden="true">→</b>
+          </Link>
+          <Link href="/camas-plumber">
+            <span>Serving neighboring Camas</span>
+            <strong>Camas plumber</strong>
+            <b aria-hidden="true">→</b>
+          </Link>
+          <Link href="/vancouver-plumber">
+            <span>Serving Clark County</span>
+            <strong>Vancouver plumber</strong>
+            <b aria-hidden="true">→</b>
+          </Link>
+          <Link href="/skamania-county-plumber">
+            <span>Serving western Skamania</span>
+            <strong>Skamania County plumber</strong>
+            <b aria-hidden="true">→</b>
+          </Link>
+        </div>
+      </section>
 
       <section className="page-shell section-block">
         <div className="section-heading">

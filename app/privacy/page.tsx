@@ -5,6 +5,7 @@ import { PageHero, SiteShell, business } from "../site-components";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for Shield Plumbing LLC, including customer and mobile messaging information.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {

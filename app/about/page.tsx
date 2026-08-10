@@ -4,6 +4,7 @@ import { CtaBand, PageHero, SiteShell } from "../site-components";
 export const metadata: Metadata = {
   title: "About",
   description: "Meet Will Mortensen and discover the protection, integrity, reliability, and trust behind Shield Plumbing.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
