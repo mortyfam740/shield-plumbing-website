@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { ServicePage } from "../service-page";
+import { projectPhotos } from "../project-photos";
 
 export const metadata: Metadata = {
   title: "Remodel Plumbing & Rough-Ins",
-  description: "Residential bathroom, kitchen, and basement remodel plumbing, rough-ins, fixture relocation, and finish plumbing in Southwest Washington.",
+  description: "Residential kitchen and bathroom remodel plumbing in Southwest Washington and selected Portland-area Oregon communities. Rough-in and finish plumbing.",
   alternates: { canonical: "/remodel-plumbing-rough-ins" },
 };
 
 export default function RemodelPlumbingPage() {
   return (
     <ServicePage
+      project={{ title: "The details behind the finished room.", photos: [projectPhotos.remodel] }}
       eyebrow="Remodel plumbing & rough-ins"
       title="Plumbing planned around the finished space."
       intro="Shield Plumbing provides residential rough-in and finish plumbing for bathroom, kitchen, basement, and other home improvement projects in coordination with homeowners and contractors."

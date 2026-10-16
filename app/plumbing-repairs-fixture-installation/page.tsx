@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { ServicePage } from "../service-page";
+import { projectPhotos } from "../project-photos";
 
 export const metadata: Metadata = {
   title: "Plumbing Repairs & Fixture Installation",
-  description: "Residential leak repair, valve replacement, damaged pipe repair, and plumbing fixture installation in Southwest Washington.",
+  description: "Residential leak repair, valve replacement, pipe repair, and fixture installation in Southwest Washington and selected Portland-area Oregon communities.",
   alternates: { canonical: "/plumbing-repairs-fixture-installation" },
 };
 
 export default function PlumbingRepairsPage() {
   return (
     <ServicePage
+      project={{ title: "A look at a replacement project.", photos: [projectPhotos.pressureTank] }}
       eyebrow="Plumbing repairs & fixture installation"
       title="Practical repairs for the plumbing you use every day."
       intro="Shield Plumbing repairs leaking or damaged piping, replaces valves and failing components, and installs residential fixtures with clear communication about the work involved."

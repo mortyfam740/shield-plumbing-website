@@ -34,7 +34,8 @@ export default function Home() {
             <p>
               Shield Plumbing is an owner-operated residential plumber based in
               Washougal and serving homeowners in Camas, Vancouver, and nearby
-              Southwest Washington communities.
+              Southwest Washington communities, plus selected residential areas in
+              Northeast and Southeast Portland, Milwaukie, Clackamas, and Happy Valley.
             </p>
             <div className="hero-actions">
               <a className="button button-light" href={`tel:${business.phoneHref}`}>
@@ -57,7 +58,7 @@ export default function Home() {
             <div className="area-card">
               <small>Based in</small>
               <strong>Washougal, WA</strong>
-              <span>Serving Southwest Washington</span>
+              <span>Southwest Washington &amp; selected Oregon communities</span>
             </div>
           </div>
         </div>
@@ -93,6 +94,16 @@ export default function Home() {
           <Link href="/skamania-county-plumber">
             <span>Serving western Skamania</span>
             <strong>Skamania County plumber</strong>
+            <b aria-hidden="true">→</b>
+          </Link>
+          <Link href="/portland-plumber">
+            <span>Now serving Oregon</span>
+            <strong>NE &amp; SE Portland plumber</strong>
+            <b aria-hidden="true">→</b>
+          </Link>
+          <Link href="/happy-valley-clackamas-plumber">
+            <span>Milwaukie, Clackamas & Happy Valley</span>
+            <strong>Happy Valley, Clackamas &amp; Milwaukie</strong>
             <b aria-hidden="true">→</b>
           </Link>
         </div>
@@ -132,10 +143,10 @@ export default function Home() {
         <div className="split-story-photo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/shield-service-plumbing.png"
-            alt="Water flowing from a clean residential bathroom faucet"
-            width={1536}
-            height={1024}
+            src="/images/projects/will-water-heater-connections.webp"
+            alt="Will Mortensen working on plumbing connections beside a residential water heater"
+            width={1050}
+            height={1400}
             loading="lazy"
           />
         </div>
@@ -169,8 +180,8 @@ export default function Home() {
             <dd>#{business.waLicense}</dd>
           </div>
           <div>
-            <dt>Business</dt>
-            <dd>Shield Plumbing LLC</dd>
+            <dt>Oregon contractor license</dt>
+            <dd>CCB #{business.orCcb}</dd>
           </div>
           <div>
             <dt>Service type</dt>

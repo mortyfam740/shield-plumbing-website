@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { ServicePage } from "../service-page";
+import { projectPhotos } from "../project-photos";
 
 export const metadata: Metadata = {
-  title: "Water Heater Replacement in Southwest Washington",
-  description: "Professional gas, electric, and tankless water heater replacement in Washougal, Camas, Vancouver, and nearby Southwest Washington communities.",
+  title: "Water Heater Replacement | Southwest WA & Portland Area",
+  description: "Gas, electric, and tankless water heater replacement in Southwest Washington and selected NE/SE Portland, Milwaukie, Clackamas, and Happy Valley areas.",
   alternates: { canonical: "/water-heater-replacement" },
 };
 
 export default function WaterHeaterReplacementPage() {
   return (
     <ServicePage
+      project={{ title: "Careful work, from connections to controls.", photos: [projectPhotos.waterHeater, projectPhotos.controls] }}
       eyebrow="Water heater replacement"
       title="A dependable replacement, chosen for your home."
       intro="When it is time to replace your water heater, Shield Plumbing helps you choose a practical option for your home, household needs, and budget—and installs it with careful attention to the complete system."

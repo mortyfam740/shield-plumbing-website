@@ -427,3 +427,20 @@ footer::after { border: 1px solid rgba(8,35,61,.055); clip-path: polygon(50% 0, 
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* Real project photography and Oregon coverage additions. */
+.project-section { padding-top: 64px; padding-bottom: 64px; }
+.project-section h2 { color: var(--navy-900); font-size: clamp(30px, 4vw, 48px); line-height: 1.12; margin: 0 0 30px; }
+.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 1000px; }
+.project-gallery-single { grid-template-columns: minmax(0, 1fr); max-width: 720px; }
+.project-photo { margin: 0; min-width: 0; }
+.project-photo img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.project-photo figcaption, .area-map-figure figcaption { color: var(--muted); font-size: 13px; line-height: 1.6; padding-top: 12px; }
+.city-story .project-photo { margin-top: 30px; max-width: 480px; }
+.area-map-figure { margin: 0; }
+.site-header .nav-dropdown-menu { max-width: calc(100vw - 32px); width: max-content; }
+.site-header .nav-dropdown-menu a { white-space: normal; }
+@media (max-width: 660px) {
+  .project-gallery { grid-template-columns: minmax(0, 1fr); }
+  .project-section { padding-top: 44px; padding-bottom: 44px; }
+}
