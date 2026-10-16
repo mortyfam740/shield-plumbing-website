@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CtaBand, PageHero, SiteShell, TrustStrip } from "./site-components";
+import { ProjectGallery, type ProjectPhoto } from "./project-photos";
 
 type ServicePageProps = {
   eyebrow: string;
@@ -16,6 +17,7 @@ type ServicePageProps = {
   related: { href: string; label: string; text: string }[];
   ctaTitle: string;
   ctaText: string;
+  project?: { title: string; photos: ProjectPhoto[] };
 };
 
 export function ServicePage(props: ServicePageProps) {
@@ -51,6 +53,8 @@ export function ServicePage(props: ServicePageProps) {
           </div>
         </div>
       </section>
+
+      {props.project && <ProjectGallery title={props.project.title} photos={props.project.photos} />}
 
       <section className="page-shell related-services">
         <p className="eyebrow">Related services</p>

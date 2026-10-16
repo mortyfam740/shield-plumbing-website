@@ -7,6 +7,7 @@ export const business = {
   phoneHref: "+13603353905",
   email: "info@shieldplumbingllc.com",
   waLicense: "SHIELPL740L9",
+  orCcb: "263396",
   mailingAddress: "3307 Evergreen Way STE 707 #305, Washougal, WA 98671",
   hoursDisplay: "Monday–Friday, 8:00 a.m.–4:00 p.m.",
 };
@@ -17,6 +18,7 @@ export function Header() {
       <div className="utility-bar">
         <span>Licensed, bonded &amp; insured</span>
         <span>WA License #{business.waLicense}</span>
+        <span>OR CCB #{business.orCcb}</span>
         <a href={`tel:${business.phoneHref}`}>{business.phoneDisplay}</a>
       </div>
       <header className="site-header">
@@ -48,6 +50,8 @@ export function Header() {
               <Link href="/camas-plumber">Camas</Link>
               <Link href="/vancouver-plumber">Vancouver</Link>
               <Link href="/skamania-county-plumber">Skamania County</Link>
+              <Link href="/portland-plumber">NE &amp; SE Portland</Link>
+              <Link href="/happy-valley-clackamas-plumber">Happy Valley, Clackamas &amp; Milwaukie</Link>
             </div>
           </details>
           <Link href="/about">About</Link>
@@ -101,6 +105,8 @@ export function Footer() {
           <Link href="/camas-plumber">Camas plumber</Link>
           <Link href="/vancouver-plumber">Vancouver plumber</Link>
           <Link href="/skamania-county-plumber">Skamania County plumber</Link>
+          <Link href="/portland-plumber">NE &amp; SE Portland plumber</Link>
+          <Link href="/happy-valley-clackamas-plumber">Happy Valley, Clackamas &amp; Milwaukie</Link>
           <Link href="/service-area">Full service area</Link>
         </div>
         <div className="footer-links">
@@ -116,6 +122,7 @@ export function Footer() {
           <Link href="/sms-terms">SMS Terms &amp; Privacy</Link>
           <Link href="/sms-opt-in">SMS Opt-In</Link>
           <span>WA #{business.waLicense}</span>
+          <span>OR CCB #{business.orCcb}</span>
         </div>
       </div>
       <div className="footer-bottom">

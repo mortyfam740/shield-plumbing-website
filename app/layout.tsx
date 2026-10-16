@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Shield Plumbing",
   },
   description:
-    "Shield Plumbing provides trusted residential plumbing repairs, installations, and replacements in Washougal, Camas, and Vancouver, WA. Owner-operated.",
+    "Owner-operated residential plumbing in Southwest Washington and selected NE/SE Portland, Milwaukie, Clackamas, and Happy Valley areas.",
   alternates: {
     canonical: "/",
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Shield Plumbing",
     title: "Shield Plumbing | Residential Plumber in Washougal, WA",
     description:
-      "Owner-operated residential plumbing serving Washougal, Camas, Vancouver, and surrounding Southwest Washington communities.",
+      "Owner-operated residential plumbing serving Southwest Washington and selected NE/SE Portland, Milwaukie, Clackamas, and Happy Valley areas.",
     images: [
       {
         url: "/images/shield-hero-plumbing.png",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shield Plumbing | Residential Plumber in Washougal, WA",
     description:
-      "Owner-operated residential plumbing serving Washougal, Camas, Vancouver, and surrounding Southwest Washington communities.",
+      "Owner-operated residential plumbing serving Southwest Washington and selected NE/SE Portland, Milwaukie, Clackamas, and Happy Valley areas.",
     images: ["/images/shield-hero-plumbing.png"],
   },
   icons: {
@@ -84,6 +84,10 @@ const localBusinessSchema = {
     name: "Will Mortensen",
   },
   areaServed: [
+    { "@type": "Place", name: "Selected Northeast and Southeast Portland neighborhoods", containedInPlace: { "@type": "State", name: "Oregon" } },
+    { "@type": "City", name: "Milwaukie", containedInPlace: { "@type": "State", name: "Oregon" } },
+    { "@type": "Place", name: "Clackamas", containedInPlace: { "@type": "State", name: "Oregon" } },
+    { "@type": "City", name: "Happy Valley", containedInPlace: { "@type": "State", name: "Oregon" } },
     { "@type": "City", name: "Washougal", containedInPlace: { "@type": "State", name: "Washington" } },
     { "@type": "City", name: "Camas", containedInPlace: { "@type": "State", name: "Washington" } },
     { "@type": "City", name: "Vancouver", containedInPlace: { "@type": "State", name: "Washington" } },
@@ -103,11 +107,15 @@ const localBusinessSchema = {
     "Leak repair",
     "Remodel plumbing",
   ],
-  identifier: {
+  identifier: [{
     "@type": "PropertyValue",
     name: "Washington contractor license",
     value: "SHIELPL740L9",
-  },
+  }, {
+    "@type": "PropertyValue",
+    name: "Oregon CCB license",
+    value: "263396",
+  }],
 };
 
 export default function RootLayout({

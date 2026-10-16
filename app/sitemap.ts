@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/camas-plumber", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/vancouver-plumber", priority: 0.85, changeFrequency: "monthly" as const },
     { path: "/skamania-county-plumber", priority: 0.75, changeFrequency: "monthly" as const },
+    { path: "/portland-plumber", priority: 0.85, changeFrequency: "monthly" as const },
+    { path: "/happy-valley-clackamas-plumber", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/about", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
   ];
